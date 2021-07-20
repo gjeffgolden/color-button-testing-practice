@@ -3,6 +3,8 @@ import App from './App';
 
 import { replaceCamelWithSpaces } from './App';
 
+
+// FUNCTIONAL TESTS 
 test('Button has correct initial color', () => {
   render(<App />);
   const button = screen.getByRole('button', { name: /Change to Midnight Blue/i } );
@@ -58,6 +60,7 @@ test('button turns gray when disabled', () => {
   expect(button).toHaveStyle({ backgroundColor: 'MidnightBlue' });
 })
 
+// UNIT TESTS
 describe('spaces before camel-case capital letters', () => {
   test('works for no inner capital letters', () => {
     expect(replaceCamelWithSpaces('Red')).toBe('Red');
